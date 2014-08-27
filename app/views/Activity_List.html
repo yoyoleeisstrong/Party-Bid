@@ -1,0 +1,66 @@
+
+
+<body>
+<!--
+  <div class="side-slide-left">
+    <ul class="list-style-3">
+      <li><a href="user-manage.html"><i class="icon-group"></i> 客户管理</a></li>
+      <li><a href="survey-list.html"><i class="icon-comments"></i> 群发调查</a></li>
+      <li class="active"><a href="weibo-list.html"><i class="icon-twitter"></i> 微博分析</a></li>
+      <li><a href="setting.html"><i class="icon-cogs"></i> 设置</a></li>
+    </ul>
+    <h2>客户通</h2>
+  </div>
+
+  <div class="side-slide-mask"></div>-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PartyBid</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/android.css" rel="stylesheet" media="screen">
+
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="application/javascript" src="js/iscroll-lite.js"></script>
+<script type="text/javascript">
+
+//    var myScroll;
+//    function loaded() {
+//        setTimeout(function () {
+//            myScroll = new iScroll('wrapper');
+//        }, 100);
+//    }
+//
+//    window.addEventListener('load', loaded, false);
+
+
+</script>
+
+
+
+<header>
+    活动列表
+    <div class="header-right">
+        <a class="btn-style btn-4" ng-click="go_create_activity()">创建活动</a>
+    </div>
+</header>
+
+<form class="wrapper-inner">
+    <div id="wrapper" class="wrapper">
+        <ul class="list-style-2 ">
+            <li class=" clearfix btn-default" ng-repeat="activity in activities" >
+                <p class="p-left">{{activity}}</p>
+                <span class="glyphicon glyphicon-circle-arrow-right p-right"></span>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+
+
+</body
