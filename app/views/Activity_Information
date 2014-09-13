@@ -1,0 +1,15 @@
+<header>
+    <p id="activity_name">{{information}}</p>
+</header>
+</br>
+</br>
+</br>
+<div>
+    <li>
+        <button ng-click="go_Activity_List()" >返回</button>
+    </li>
+</div>
+
+
+
+

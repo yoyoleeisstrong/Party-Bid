@@ -14,7 +14,7 @@ angular.module('partyBidApp')
         };
         $scope.go_sign_up = function (input_text) {
 
-            console.log(localStorage.getItem('activities'));
+
 //判断activity_name是否为空，如果是就为空数组，否则为原来的数组
             var activity_name = localStorage.getItem('activities') ? JSON.parse(localStorage.getItem('activities')) : [];
 //把文本框中的数组放进中转站（是个对象）
@@ -23,8 +23,39 @@ angular.module('partyBidApp')
             activity_name.unshift(buffer_name.name);
 //存到storage里
             localStorage.setItem('activities',JSON.stringify(activity_name));
+
+
             $location.path('/sign_up');
 
         };
 
+
+        $scope.check=function(){
+            var check_arg;
+            var If_Exist=localStorage.getItem('activities')?[1]:[2];
+            if(If_Exist[0] == 1){
+                check_arg=true;
+            }
+            else{
+                check_arg=false;
+            }
+            return check_arg;
+
+        }
+        $scope.check_repeat=function(input_text) {
+            var input=input_text;
+            var activities = JSON.parse(localStorage.getItem('activities'));
+            var x;
+            for (x in activities) {
+                if (input == activities[x]) {
+
+                    $scope.check_text = false;
+                    return true;
+                }
+
+            }
+                $scope.check_text = true;
+                return false;
+
+        }
     });

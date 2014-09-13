@@ -18,14 +18,10 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
-//      .when('/', {
-//        templateUrl: 'views/main.html',
-//        controller: 'MainCtrl'
-//      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      $routeProvider
+      .when('/', {
+         templateUrl: 'views/start.html',
+         controller: 'StartCtrl'
       })
       .when('/CreateActivity', {
             templateUrl: 'views/CreateActivity.html',
@@ -39,6 +35,10 @@ angular
             templateUrl: 'views/sign_up.html',
             controller: 'sign_upCtrl'
         })
+      .when('/Activity_Information',{
+            templateUrl:'views/Activity_Information',
+            controller:'InformationCtrl'
+          })
       .otherwise({
         redirectTo: '/'
       });
