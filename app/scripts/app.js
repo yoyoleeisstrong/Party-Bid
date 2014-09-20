@@ -20,7 +20,7 @@ angular
   .config(function ($routeProvider) {
       $routeProvider
       .when('/', {
-         templateUrl: 'views/start.html',
+         templateUrl: 'views/CreateActivity.html',
          controller: 'StartCtrl'
       })
       .when('/CreateActivity', {
@@ -35,10 +35,6 @@ angular
             templateUrl: 'views/sign_up.html',
             controller: 'sign_upCtrl'
         })
-      .when('/Activity_Information',{
-            templateUrl:'views/Activity_Information',
-            controller:'InformationCtrl'
-          })
       .otherwise({
         redirectTo: '/'
       });
