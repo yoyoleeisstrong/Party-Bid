@@ -23,4 +23,4 @@ angular.module('partyBidApp')
             $location.path('/CreateActivity');
         }
 
-    });
+    }); 
