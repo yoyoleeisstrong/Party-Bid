@@ -3,8 +3,27 @@
  font-size:30px;
  color:black;
  padding-bottom: 15px;
- padding-left: 5px;
+ padding-left: 10px;
+ padding-right: 0px;
  padding-top: 15px;
+ background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, yellow), color-stop(1, yellow ));
+ border-bottom: 1px solid yellow;
+ border-top: 1px solid yellow;
+ border-top-width: 1px;
+
+}
+#my_activity_word{
+ font-weight:bold;
+ font-size:30px;
+ color:black;
+ padding-bottom: 15px;
+ padding-left: 10px;
+ padding-right: 0px;
+ padding-top: 15px;
+ background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #FCF6F6), color-stop(1, #CCCBCB))
+ border-bottom: 1px solid D4CECE;
+ border-top: 1px solid D4CECE;
+ border-top-width: 1px;
 
 }
 #activity_name{
@@ -15,6 +34,10 @@
 #CreateActivity{
  padding-bottom: 13px;
  padding-top: 13px;
+}
 
-
+#boxsize{
+ font-size:45px;
+ padding-bottom: 0px;
+ padding-top: 0px;
 }

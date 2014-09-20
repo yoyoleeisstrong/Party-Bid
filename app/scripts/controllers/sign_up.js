@@ -8,7 +8,7 @@ angular.module('partyBidApp')
     $scope.StartSignUp=function(){
        $location.path('/sign_up');
        $scope.start="结束";
-
+       var activity_background=loacalStorage.setItem('background_color','yellow');
     };
 
     $scope.go_Activity_List=function(){

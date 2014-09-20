@@ -4,7 +4,7 @@ function Activity(name){
 
 Activity.set_activity_list = function(input_name){
     var input=input_name;
-    var activity_list = Activity.get_activities();
+    var activity_list = Activity.get_activities()?Activity.get_activities():[];
     activity_list.unshift(input);
     Activity.save_activities(activity_list);
 };
@@ -14,7 +14,7 @@ Activity.save_activities = function(activity_list){
 };
 
 Activity.get_activities = function(){
-    return JSON.parse(localStorage.getItem('activities')) || [];
+    return JSON.parse(localStorage.getItem('activities'));
 };
 
 Activity.duplicated = function(input_text){

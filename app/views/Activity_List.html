@@ -5,14 +5,12 @@
     </div>
 </header>
     <div id="wrapper" class="wrapper">
+        <p class="p-left" id="my_word" >{{the_activity}}</p>
         <ul class="list-style-2 ">
-            <li class=" clearfix btn-default" ng-repeat="activity in activities" ng-click="activity_information(activity)">
-                <p class="p-left" id="my_word">{{activity}}</p>
-
+            <li class=" btn-default" ng-repeat="activity in activities" ng-click="activity_information()">
+                <p class="p-left" id="my_activity_word" >{{activity}}</p>
             </li>
         </ul>
-
-
     </div>
 
 
