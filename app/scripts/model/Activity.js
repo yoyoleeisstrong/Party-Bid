@@ -1,13 +1,14 @@
-function Activity(name){
+function Activity(name,state){
     this.name = name;
+    this.state = state || 'unstart';
 }
 
-Activity.set_activity_list = function(input_name){
-    var input=input_name;
+Activity.set_activity_list = function(activity){
     var activity_list = Activity.get_activities()?Activity.get_activities():[];
-    activity_list.unshift(input);
+    activity_list.unshift(activity);
     Activity.save_activities(activity_list);
 };
+
 
 Activity.save_activities = function(activity_list){
     localStorage.setItem('activities',JSON.stringify(activity_list));
@@ -27,7 +28,7 @@ Activity.duplicated = function(input_text){
     }
 };
 
-Activity.weathertoshow_fanhui=function(){
+Activity.weathertoshow_fanhui = function(){
     var check;
     var If_Exist=Activity.get_activities()?[1]:[2];
     if(If_Exist[0] == 1){
@@ -37,4 +38,12 @@ Activity.weathertoshow_fanhui=function(){
         check=false;
     }
     return check;
+};
+
+Activity.save_choosen_activity_state = function(state){
+    return localStorage.setItem('activity_state',state);
+};
+
+Activity.get_choosen_activity_state = function(){
+    return localStorage.getItem('activity_state');
 };

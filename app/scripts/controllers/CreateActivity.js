@@ -14,7 +14,8 @@ angular.module('partyBidApp')
                 $scope.check_repeat = true;
                 return;
             }
-                Activity.set_activity_list(input_text);
+            var activity = new Activity(input_text);
+                Activity.set_activity_list(activity);
                 $location.path('/sign_up');
             };
 
