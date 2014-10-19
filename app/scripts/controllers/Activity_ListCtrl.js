@@ -10,16 +10,14 @@ angular.module('partyBidApp')
             };
             $scope.activities=Activity.get_activities();
             $scope.activity_information=function(activity){
-                var i;
-                var activities_buffer=Activity.get_activities();
-                console.log(activities_buffer[0].name)
-                for(i in activities_buffer){
-                    if(activities_buffer[i].name == activity.name){
-                        console.log(activities_buffer[i])
-                        activities_buffer[i].state = 'start';
-                    }
-                localStorage.setItem('activities',JSON.stringify(activities_buffer));
-                }
+//                var i;
+//                var activities_buffer=Activity.get_activities();
+//                for(i in activities_buffer){
+//                    if(activities_buffer[i].name == activity.name){
+                        localStorage.setItem('activity_name',activity.name);
+//                    }
+//                localStorage.setItem('activities',JSON.stringify(activities_buffer));
+//                }
                 Activity.save_choosen_activity_state(activity.state);
                 $location.path('/sign_up');
                 return activity;
